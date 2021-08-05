@@ -1,0 +1,231 @@
+:root {
+  --centColor: #fafafa;
+  --centBack: #0D8CFE;
+  --receivedColor: #333;
+  --receivedBack: #DFE2E9;
+  --loginBack: #04BCFF;
+  --chatroomBack: #FDFDFD;
+  --headerColor: #fafafa;
+  --headerBack: #0D8CFE;
+  --headColor: #0D8CFE;
+  --chatBack: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
+  --sendIc: #333;
+}
+
+body .container:first-of-type {
+  position: relative;
+}
+
+.AZChat {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  height: 99.7vh;
+  max-height: 99.7vh;
+  padding: 14vh 5% 0;
+  background: var(--chatBack);
+}
+.AZChat h2 {
+  color: var(--headColor);
+  position: absolute;
+  top: 3vh;
+  right: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+.AZChat .chatContainer {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 98%;
+}
+.AZChat .chatContainer .sginBtn {
+  background: -webkit-gradient(linear, left top, right top, from(#f6f6f6), to(white));
+  background: linear-gradient(90deg, #f6f6f6 0%, white 100%);
+  color: var(--loginBack);
+  border: none;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  width: 100%;
+  height: 2rem;
+  font-weight: 600;
+  position: absolute;
+  top: 2.3rem;
+  right: 0;
+}
+.AZChat .chatContainer .chatHeader {
+  background-color: var(--headerBack);
+  height: 2.3rem;
+  min-height: 2.3rem;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  width: inherit;
+  max-width: inherit;
+  z-index: 99;
+  padding: 3px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.4rem 0.4rem 0rem 0rem;
+  /*.tgBtn{
+    position: absolute;
+    top: 0.6rem;
+    right: 1.2rem;
+    z-index: 99999;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+  }*/
+}
+.AZChat .chatContainer .chatHeader > * {
+  background-color: transparent;
+  color: var(--headerColor);
+  display: inline-block;
+  float: right;
+}
+.AZChat .chatContainer .chatHeader h5 {
+  /*margin: 0.5rem 0rem;*/
+  float: left;
+  margin-top: 0.2rem;
+}
+.AZChat .chatContainer .chatHeader .btnStyle {
+  position: absolute;
+  top: 4px;
+  right: calc(50% - 23px);
+}
+.AZChat .chatContainer .chatHeader button {
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.AZChat .chatContainer .chatHeader .chatHeader__colorMoodWrapper {
+  float: right;
+}
+.AZChat .chatContainer .chatHeader .chatHeader__colorMoodWrapper svg {
+  color: var(--textColor);
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+.AZChat .chatContainer .chatHeader .chatHeader__colorMoodWrapper .chatHeader__colorMoodWrapper__moon {
+  display: none;
+}
+.AZChat .chatContainer .chatRoom {
+  height: calc(100% - 2.3rem);
+  background-color: var(--chatroomBack);
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 2.3rem;
+  right: 0;
+}
+.AZChat .chatContainer .chatRoom #mainChat {
+  padding: 10px 0px;
+  height: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
+  margin: 0;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.AZChat .chatContainer .chatRoom #mainChat::-webkit-scrollbar {
+  width: 0.25rem;
+}
+.AZChat .chatContainer .chatRoom #mainChat::-webkit-scrollbar-track {
+  background: var(--receivedBack);
+}
+.AZChat .chatContainer .chatRoom #mainChat::-webkit-scrollbar-thumb {
+  background: var(--receivedColor);
+  border-radius: 0.5rem;
+}
+.AZChat .chatContainer .chatRoom #mainChat .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3px 0px;
+}
+.AZChat .chatContainer .chatRoom #mainChat .message img {
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
+  border-radius: 50%;
+}
+.AZChat .chatContainer .chatRoom #mainChat .message p {
+  max-width: 500px;
+  margin-bottom: 0px;
+  line-height: 24px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+}
+.AZChat .chatContainer .chatRoom #mainChat .sent {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.AZChat .chatContainer .chatRoom #mainChat .sent p {
+  color: var(--centColor);
+  background: var(--centBack);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-bottom-right-radius: 0px;
+}
+.AZChat .chatContainer .chatRoom #mainChat .received p {
+  color: var(--receivedColor);
+  background: var(--receivedBack);
+  border-bottom-left-radius: 0px;
+}
+.AZChat .chatContainer .chatRoom form {
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--chatroomBack);
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  border-top: 1px solid lightgrey;
+}
+.AZChat .chatContainer .chatRoom form * {
+  border: none;
+  background-color: transparent;
+}
+.AZChat .chatContainer .chatRoom form button {
+  width: 3.5rem;
+}
+.AZChat .chatContainer .chatRoom form button svg {
+  font-size: 1.2rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-bottom: 0.5rem;
+  color: var(--sendIc);
+}
+.AZChat .chatContainer .chatRoom form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.AZChat .chatContainer .chatRoom form input {
+  line-height: 1.5;
+  width: calc(100% - 3.5rem);
+  font-size: 0.9rem;
+  color: var(--receivedColor);
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
