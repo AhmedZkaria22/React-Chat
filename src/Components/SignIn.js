@@ -19,7 +19,7 @@ function SignIn() {
     }
 
     return(        
-        <button className={"sginBtn"} onClick={ signInWithGoogle } >Sign in with Google</button>        
+        <button className={"sginBtn"} onClick={() => {signInWithGoogle(); }} >Sign in with Google</button>        
     )
 }
 
